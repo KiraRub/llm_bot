@@ -37,6 +37,6 @@ export class AppService {
         console.log('Ответ:', response.data.choices["0"].message.content);
         return response.data.choices["0"].message.content
       } catch (error) {
-        return 'Ошибка:', error.response ? error.response.data : error.message
+        return (error.response ? error.response.data : error.message)
       }
   }}
